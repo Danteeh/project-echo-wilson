@@ -1,0 +1,40 @@
+const mockRecords = [
+    {
+        timestamp: "2025-09-20T10:50:33",
+        filename: "Rec 2025-09-20 10h50m33s 1.wav",
+        dbfs_level: -35.56157370619146,
+        rms_energy: 0.016669451686961344,
+        dominant_frequency: 89.99537507254789,
+        spectral_centroid: 2228.60580486925,
+        spectral_rolloff: 4521.8610161811785,
+        zero_crossing_rate: 0.040239827215768395,
+        duration: 300.05986394557823,
+        sample_rate: 44100,
+    },
+    {
+        timestamp: "2025-09-20T10:55:33",
+        filename: "Rec 2025-09-20 10h55m33s 1.wav",
+        dbfs_level: -100.0,
+        rms_energy: 0.0,
+        dominant_frequency: 0.0,
+        spectral_centroid: 0.0,
+        spectral_rolloff: 0.0,
+        zero_crossing_rate: 0.0,
+        duration: 0.0,
+        sample_rate: 44100,
+    },
+    {
+        timestamp: "2025-09-20T11:23:14",
+        filename: "Rec 2025-09-20 11h23m14s 1.wav",
+        dbfs_level: -31.833716381028875,
+        rms_energy: 0.02560437510197511,
+        dominant_frequency: 22.708696677721868,
+        spectral_centroid: 2229.9942479913475,
+        spectral_rolloff: 4292.113345867796,
+        zero_crossing_rate: 0.04458426934841439,
+        duration: 76.138231292517,
+        sample_rate: 44100,
+    },
+];
+
+export default mockRecords;

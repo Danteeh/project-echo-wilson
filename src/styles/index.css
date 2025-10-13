@@ -1,0 +1,238 @@
+/* ---------- Variables globales ---------- */
+:root {
+    --color-bg: #d6fff6;
+    --color-text: #231651;
+    --color-surface: #ffffff;
+    --color-accent: #231651;
+    --color-accent-hover: #3b2a8f;
+    --color-border: rgba(35, 22, 81, 0.1);
+    --color-shadow: rgba(35, 22, 81, 0.15);
+}
+
+/* ---------- Reset ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+/* ---------- Contenedor global ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ---------- Títulos ---------- */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--color-accent);
+    border-left: 4px solid var(--color-accent);
+    padding-left: 0.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+/* ---------- Tarjetas ---------- */
+.card {
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--color-shadow);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+/* ---------- Botones ---------- */
+button {
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* ---------- Inputs y selectores ---------- */
+input,
+select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    display: block;
+    color: var(--color-text);
+}
+
+/* ---------- Tablas ---------- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--color-surface);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px var(--color-border);
+}
+
+.table td,
+.table th {
+    white-space: nowrap;
+    padding: 0.75rem;
+}
+
+.table td {
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table tr:hover {
+    background-color: rgba(35, 22, 81, 0.05);
+}
+
+/* ---------- Gráficos ---------- */
+.chart-container {
+    background-color: var(--color-surface);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--color-shadow);
+    margin-top: 1.5rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* ---------- Filtros de fecha ---------- */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+/* ---------- Calendario ---------- */
+.react-datepicker-wrapper {
+    width: 250px;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+}
+
+/* ---------- Dropdown menu ---------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background: var(--color-accent);
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.dropdown-toggle:focus {
+    outline: 2px solid rgba(35, 22, 81, 0.3);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 180px;
+    background: var(--color-surface);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px var(--color-shadow);
+    padding: 0.25rem 0;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: var(--color-bg);
+}
